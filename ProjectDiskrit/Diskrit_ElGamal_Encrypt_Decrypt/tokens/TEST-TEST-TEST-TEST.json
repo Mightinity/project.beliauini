@@ -1,0 +1,8 @@
+{
+  "TEST-TEST-TEST-TEST": {
+    "ENCRYPT": "False",
+    "DECRYPT": "True",
+    "IP": null,
+    "NAME": null
+  }
+}
