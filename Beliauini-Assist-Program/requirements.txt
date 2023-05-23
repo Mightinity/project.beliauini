@@ -1,0 +1,12 @@
+discord.py
+discord
+requests
+pytz
+python-dateutil
+python-dotenv
+psutil
+time
+asyncio
+datetime
+os
+chat_exporter

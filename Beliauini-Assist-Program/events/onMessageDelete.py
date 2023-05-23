@@ -20,7 +20,7 @@ class onMessageDelete(commands.Cog):
                     break
         embed = discord.Embed(
             title=f"[LOGGING SYSTEM]",
-            description=f"Message from {message.author.mention} Deleted by: {deleted_by.mention}" if deleted_by else f"Message from {message.author.mention} Deleted by himself",
+            description=f"Message from {message.author.mention} deleted by: {deleted_by.mention}" if deleted_by else f"Message from {message.author.mention} deleted by himself",
             color=discord.Color.red())
         embed.add_field(name="**Message:**", value=message.content)
         embed.set_author(name="Beliauini Assist", icon_url=os.getenv("LOGO"))

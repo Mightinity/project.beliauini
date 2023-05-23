@@ -75,4 +75,4 @@ async def export(ctx):
         pass
 
 
-bot.run('MTEwOTEzMTYyNzcyMTkyMDYzMg.GqY-hk.pVSqRrq3SU-W2XG2VyexWBmdxsnMbHR6g4mVLI')
+bot.run('MTEwOTEzMTYyNzcyMTkyMDYzMg.GojGyY.AMpcQn9V5nDKLprSLQ6G8z0fYoKf0dQyh1K9us')
