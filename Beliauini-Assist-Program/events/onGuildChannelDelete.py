@@ -14,8 +14,9 @@ class onGuildChannelDelete(commands.Cog):
         category_name = channel.category.name if channel.category else "null"
         channel_log = self.bot.get_channel(int(os.getenv("TXC_LOGGING")))
         embed = discord.Embed(
-            title=f"Channel '{channel.name}' deleted in category '{category_name}'",
-            color=discord.Color.dark_red())
+            title=f"Activity Logging System",
+            description=f"Channel '{channel.name}' deleted in category '{category_name}'",
+            color=discord.Color.brand_red())
         embed.set_author(name="Beliauini Assist", icon_url=os.getenv("LOGO"))
         embed.set_thumbnail(url=os.getenv("LOGO"))
         embed.set_footer(text="Beliauini Assist \u00A9 2023 - " + os.getenv("VERSION"))

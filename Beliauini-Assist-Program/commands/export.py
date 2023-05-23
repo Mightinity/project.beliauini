@@ -23,8 +23,9 @@ class ConfirmButton(Button):
 
     async def callback(self, interaction: discord.Interaction):
         await interaction.message.delete()
+        await self.channel.send("```Export are loading...```")
         await self.export_cog.transcript(self.channel)
-        await self.channel.send("```Export Confirmed!. Deleting text-channel 3 seconds```")
+        await self.channel.send("```Export Completed!. Deleting text-channel 3 seconds```")
         await asyncio.sleep(3)
         await Export.delete_channel(self.channel)
 

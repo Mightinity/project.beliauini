@@ -11,6 +11,8 @@ class onMessageDelete(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message_delete(self, message):
+        if isinstance(message.author, discord.Embed) or message.author.bot:
+            return  
         channel = self.bot.get_channel(int(os.getenv("TXC_LOGGING")))
         deleted_by = None
         if message.guild is not None:
@@ -19,7 +21,7 @@ class onMessageDelete(commands.Cog):
                     deleted_by = entry.user
                     break
         embed = discord.Embed(
-            title=f"[LOGGING SYSTEM]",
+            title=f"Activity Logging System",
             description=f"Message from {message.author.mention} deleted by: {deleted_by.mention}" if deleted_by else f"Message from {message.author.mention} deleted by himself",
             color=discord.Color.red())
         embed.add_field(name="**Message:**", value=message.content)

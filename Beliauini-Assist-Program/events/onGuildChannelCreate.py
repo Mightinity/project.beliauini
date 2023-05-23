@@ -14,9 +14,9 @@ class onGuildChannelCreate(commands.Cog):
         category_name = channel.category.name if channel.category else "null"
         channel_log = self.bot.get_channel(int(os.getenv("TXC_LOGGING")))
         embed = discord.Embed(
-            title=f"Channel {channel.name} created in category #{category_name}",
-            description=f"Channel URL: {channel.jump_url}",
-            color=discord.Color.dark_green())
+            title=f"Activity Logging System",
+            description=f"Channel {channel.mention} created in category '{category_name}'",
+            color=discord.Color.brand_green())
         embed.set_author(name="Beliauini Assist", icon_url=os.getenv("LOGO"))
         embed.set_thumbnail(url=os.getenv("LOGO"))
         embed.set_footer(text="Beliauini Assist \u00A9 2023 - " + os.getenv("VERSION"))

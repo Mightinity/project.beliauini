@@ -10,9 +10,11 @@ class onMessageEdit(commands.Cog):
         
     @commands.Cog.listener()    
     async def on_message_edit(self, before, after):
+        if isinstance(after.author, discord.Embed) or after.author.bot:
+            return
         channel = self.bot.get_channel(int(os.getenv("TXC_LOGGING")))
         embed = discord.Embed(
-            title=f"[LOGGING SYSTEM]",
+            title=f"Activity Logging System",
             description=f"Message Edited in {after.jump_url} by {before.author.mention}",
             color=discord.Color.red())
         embed.add_field(name="**Before Message:**", value=f"{before.content}", inline=False)

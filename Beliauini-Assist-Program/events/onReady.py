@@ -21,7 +21,7 @@ class onReady(commands.Cog):
             await channel.send(f"```First option to connect:\nbelver@223.ip.ply.gg -p 51750```")
             await channel.send(f"```Second option to connect:\nbelver@{ip} -p {port}```")
         except Exception as e:
-            await channel.send(f"Error sync: ```{e}```")
+            await channel.send(f"`Error sync:` ```js\n{e}\n```")
             
 async def setup(bot):
     await bot.add_cog(

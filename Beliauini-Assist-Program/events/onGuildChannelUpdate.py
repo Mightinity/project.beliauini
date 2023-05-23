@@ -15,9 +15,9 @@ class onGuildChannelUpdate(commands.Cog):
             category_name = before.category.name if before.category else "null"
             channel_log = self.bot.get_channel(int(os.getenv("TXC_LOGGING")))
             embed = discord.Embed(
-                title=f"Channel '{before.name}' renamed to '{after.name}' in category '{category_name}'",
-                description=f"New Channel URL: {after.jump_url}",
-                color=discord.Color.dark_orange())
+                title=f"Activity Logging System",
+                description=f"Channel {before.name} renamed to {after.mention} in category '{category_name}'",
+                color=discord.Color.orange())
             embed.set_author(name="b0t-liau1ni", icon_url=os.getenv("LOGO"))
             embed.set_thumbnail(url=os.getenv("LOGO"))
             embed.set_footer(text="b0t-liau1ni \u00A9 2023 - " + os.getenv("VERSION"))
@@ -25,9 +25,9 @@ class onGuildChannelUpdate(commands.Cog):
         if before.category != after.category:
             channel_log = self.bot.get_channel(int(os.getenv("TXC_LOGGING")))
             embed = discord.Embed(
-                title=f"Channel {before.name} moved category from '{before.category}' to '{after.category}'",
-                description=f"Channel URL: {after.jump_url}",
-                color=discord.Color.dark_orange())
+                title=f"Activity Logging System",
+                description=f"Channel {before.mention} moved category from '{before.category}' to '{after.category}'",
+                color=discord.Color.orange())
             embed.set_author(name="b0t-liau1ni", icon_url=os.getenv("LOGO"))
             embed.set_thumbnail(url=os.getenv("LOGO"))
             embed.set_footer(text="b0t-liau1ni \u00A9 2023 - " + os.getenv("VERSION"))
